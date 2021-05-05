@@ -1,0 +1,462 @@
+/*
+  CSS sourced from panorama/styles/crafting_station.css in the original HL:A Files. Otherwise, made by Nicholas 'Viridian' Nakano.
+*/
+
+@define textBase:			#00c0ffff;
+@define textLight:			#3dfdfcff;
+@define textDim:			#2dedfa99;
+@define textError:			#ec1c23ff;
+
+@define panelBackground:	#11353F10;
+@define panelCraftingStationForeground:	#15485710;
+@define panelForeground:	#154857cc;
+
+@define buttonDefault:		#11353Fff;
+@define buttonHover:		#00C0FFB3;
+@define buttonActive:		#00a4daff;
+@define buttonInactive:		#00C0FF36;
+
+@define paneLeftWidth:			770px;
+// below should be 15 less
+@define paneLeftWidthInner:		755px;
+// below should be 15 more
+@define paneLeftWidthBuffed:	785px;
+
+@define paneMainWidth:		1235px;
+
+@define paneRightWidth:		420px;
+
+@define barTopHeight:		65px;
+@define barMiddleHeight:	526px;
+@define barBottomHeight:	115px;
+@define barMarginVertical:	20px;
+
+@define barLeftWidth:	20px;
+@define mainMarginLeft:	18px;
+@define paddingRight:	25px;
+
+.MenuPanel
+{
+	width: 100%;
+	height: 100%;
+	flow-children: right;
+	transition-property: opacity, height;
+	transition-duration: 3s;
+	transition-timing-function: ease-in-out;
+	box-shadow: inset #3fcaed18 0px 0px 90px 10px;
+}
+
+.MenuPanel Panel
+{
+	opacity: 1;
+}
+
+.Row
+{
+	width: 100%;
+}
+
+.Row.Top
+{
+	height: 10%;
+//	border: 5px solid red;
+}
+
+.Row.Middle
+{
+	height: 80%;
+	padding: 2% 0 0 0;
+//	border: 5px solid blue;
+}
+
+.Row.Bottom
+{
+	height: 10%;
+//	border: 5px solid pink;
+}
+
+.wrapper
+{
+	height: 100%;
+	width: 100%;
+	color: textBase;
+	flow-children: down;
+	padding: 2%;
+	/*
+	transition-property: opacity, height;
+	transition-duration: 3s;
+	transition-timing-function: ease-in-out;
+
+	border: 5px solid red;*/
+}
+
+.wrapper Label
+{
+	font-family: raju;
+	font-weight: semi-bold;
+	font-size: 60px;
+	text-transform: uppercase;
+}
+
+.LeftBar
+{
+	height: 100%;
+	width: 40px;
+	background-color: textBase;
+}
+
+.LevelList
+{
+	width: 49%;
+	height: 100%;
+	horizontal-align: left;
+	flow-children: down;
+//	border: 5px solid green;
+}
+
+.DividerLine
+{
+	width: 2px;
+	height: 90%;
+	vertical-align: center;
+	horizontal-align: center;
+	background-color: textBase;
+}
+
+.SelectedLevelMenu
+{
+	width: 49%;
+	height: 100%;
+	horizontal-align: right;
+	flow-children: down;
+//	border: 5px solid yellow;
+}
+
+.HeadingBar
+{
+	width: 100%;
+	flow-children: right;
+	vertical-align: bottom;
+//	border: 5px solid purple;
+}
+
+.HeadingBar Label
+{
+	font-weight: light;
+	font-style: italic;
+	vertical-align: bottom;
+	font-size: 50px;
+	color: textDim;
+}
+
+#TopHeading
+{
+	height: 100%;
+	vertical-align: bottom;
+}
+
+#TopHeading Label
+{
+	color: textLight;
+	font-size: 80px;
+}
+
+#MapsHeading
+{
+	horizontal-align: left;
+}
+
+#SelectedHeading
+{
+	horizontal-align: right;
+}
+
+#SelectedHeading.HeadingBar Label
+{
+	horizontal-align: right;
+}
+
+.LogoBar
+{
+	height: 100%;
+	width: 40%;
+	horizontal-align: right;
+	flow-children: left;
+	vertical-align: bottom;
+//	border: 5px solid yellow;
+}
+
+#Logo
+{
+	wash-color: textBase;
+	height: 100%;
+	width: height-percentage(100%);
+}
+
+Button
+{
+	border: 3px solid textBase;
+	padding: 10px 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: transparent;
+	transition-property: background-color, border-color, brightness, pre-transform-scale2d;
+	transition-duration: 0.1s;
+}
+
+Button:hover
+{
+	pre-transform-scale2d: 1.01;
+	background-color: buttonHover;
+	border-color: transparent;
+}
+
+Button:hover Label
+{
+	color: textLight;
+}
+
+.ScrollMenu
+{
+	height: 85%;
+	width: 100%;
+	padding: 0;
+	flow-children: down;
+//	border: 5px solid green;
+}
+
+.MapItem
+{
+	height: 12.5%;
+	width: 100%;
+	flow-children: right;
+	border: 0px solid red;
+	padding: 0;
+}
+
+.MapItemButton
+{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	vertical-align: middle;
+}
+
+.MapItemButton Label
+{
+	vertical-align: middle;
+}
+
+.MapPageWrapper
+{
+	width: 20%;
+	height: 15%;
+	horizontal-align: right;
+	flow-children: right;
+//	border: 5px solid red;
+}
+
+.MapPageWrapper Button
+{
+	width: 45%;
+}
+
+#NextPageButton
+{
+	horizontal-align: right;
+	margin-left: 10%;
+}
+
+#BackPageButton
+{
+	horizontal-align: left;
+}
+
+.MapPageWrapper Label
+{
+	horizontal-align: center;
+}
+
+.InfoPanel
+{
+	height: 100%;
+	width: 100%;
+//	border: 5px solid green;
+	flow-children: down;
+}
+
+.Thumbnail
+{
+	height: 50%;
+	width: 100%;
+	border: 3px solid textBase;
+}
+
+.Thumbnail Image
+{
+	width: 100%;
+	brightness: 0.5;
+	opacity: 1;
+}
+
+#bkgd-image
+{
+	opacity: 0.2;
+	height: 100%;
+}
+
+.Thumbnail Label
+{
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+.MapInfo
+{
+	height: 50%;
+	width: 100%;
+	flow-children: down;
+}
+
+.MapInfo Label
+{
+	color: textDim;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.Title
+{
+	margin-top: barMarginVertical;
+	width: 100%;
+}
+
+.Author
+{
+	margin-top: barMarginVertical;
+	width: 100%;
+}
+
+.Description
+{
+	margin-top: barMarginVertical;
+	width: 100%;
+}
+
+.PlayMessageWrapper
+{
+	height: 100%;
+	horizontal-align: right;
+	vertical-align: bottom;
+}
+
+.PlayMessageWrapper Button
+{
+	vertical-align: bottom;
+}
+
+.PlayMessageWrapper Label
+{
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+#PlayButton
+{
+	margin: 0;
+	height: 100%;
+	width: 400px;
+}
+
+#PlayButton Label
+{
+	font-size: 80px;
+	horizontal-align: center;
+	vertical-align: center;
+	opacity: 1;
+}
+
+.CreditsButton
+{
+	width: 250px;
+}
+
+.CreditsButton Label
+{
+	horizontal-align: middle;
+}
+
+.CreditsWrapper
+{
+	width: 100%;
+	height: 100%;
+	flow-children: down;
+}
+
+.CreditsPanel
+{
+	height: 90%;
+	width: 100%;
+	flow-children: down;
+	horizontal-align: middle;
+}
+
+.CreditsPanel Label
+{
+	flow-children: down;
+	horizontal-align: middle;
+	vertical-align: top;
+	font-size: 50px;
+	width: 100%;
+}
+
+.CreditsPanel Panel
+{
+	width: 100%;
+//	border: 5px solid red;
+	margin-top: 2%;
+	flow-children: down;
+}
+
+.MenuContributers
+{
+	height: 10%;
+}
+
+.CreditsHeading Label
+{
+	color: textLight;
+	font-size: 80px;
+}
+
+.Heading
+{
+	height: 100px;
+	width: 100%;
+}
+
+.Heading Label
+{
+	font-size: 60px;
+}
+
+.ConsolationPrize
+{
+	height: 100px;
+}
+
+.CreditsButtonWrapper
+{
+	vertical-align: bottom;
+	width: 100%;
+	height: 10%;
+}
+
+.CreditsButton
+{
+	margin: 0;
+	vertical-align: bottom;
+}

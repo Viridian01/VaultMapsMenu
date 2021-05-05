@@ -1,0 +1,15 @@
+<!--
+  XML created by Nicholas 'Viridian' Nakano.
+-->
+
+<root>
+  <styles>
+		<include src="s2r://panorama/styles/base_styles.vcss_c" />
+		<include src="file://{resources}/styles/custom_game/vm1menu.css" />
+	</styles>
+  <Panel class="MapItem">
+    <Button class="MapItemButton" onmouseover="$.DispatchEvent('ClientUI_FireOutput', 2)" onactivate="$.DispatchEvent('Activated', {balls;})">
+      <Label class="EntryLabel" text="Entry"/>
+    </Button>
+  </Panel>
+</root>
